@@ -1,29 +1,21 @@
-// import './App.css';
-// import Login from "./Login"
-// import Signup from './Signup';
-// import{Routes,Route} from "react-router-dom"
+import "./App.css";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+import DashBoard from "./Components/DashBoard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// function App() {
-//   return (
-//     <div>
-//       <Routes>
-//         <Route exact path="/" element={<Login/>} />
-//         <Route exact path="/signup" element={<Signup/>} />
-//       </Routes>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import LoginForm from "./LoginForm";
-
-
-function App() {
+function App() { 
   return (
-    <div>
-      <LoginForm/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/dashBoard" element={<DashBoard/>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
+
 export default App;
